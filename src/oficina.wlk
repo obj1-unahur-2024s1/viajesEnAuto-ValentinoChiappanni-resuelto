@@ -27,12 +27,12 @@ object oficina {
 	}
 	
 	method remiseraElegidaParaViaje(cliente, kms){
-		if (self.esSegundaRemiseraMenorQuePrimera(cliente, kms) &&
+		return if (self.esSegundaRemiseraMenorQuePrimera(cliente, kms) &&
 			self.hayDiferenciaDe30Pesos(cliente, kms)
 		){
-			return segundaRemisera
+			 segundaRemisera
 		} else {
-			return primeraRemisera
+			 primeraRemisera
 		}
 	}
 	method esSegundaRemiseraMenorQuePrimera(cliente, kms){
